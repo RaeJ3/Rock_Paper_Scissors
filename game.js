@@ -72,13 +72,11 @@ function playGame() {
             break;
     }
     
-    
 
-    console.log(playRound(humanSelection, computerSelection));
 }
 
     for(let i=0;i<5;i++) {
-        playRound();
+        playRound(getHumanChoice(), getComputerChoice());
         console.log("Your Score: " + humanScore);
         console.log("AI Score: " + computerScore);
     }
