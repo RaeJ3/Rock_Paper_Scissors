@@ -1,5 +1,4 @@
-let humanScore = 0;
-let computerScore = 0;
+let rounds = 0;
 
 function getComputerChoice() {
     let a = Math.random();
@@ -23,10 +22,23 @@ function getHumanChoice(){
 }
 
 
-function playRound(humanChoice, computerChoice) {
-    console.log('ran');
-    console.log(humanChoice);
-    console.log(computerChoice);
+
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    
+
+    function playRound(humanChoice, computerChoice) {
+    
+    
+    
+    
+    
+        console.log("AI choice: " + computerChoice);
+
+
+
     switch(humanChoice) {
         case computerChoice: 
             console.log("You draw.");
@@ -60,11 +72,22 @@ function playRound(humanChoice, computerChoice) {
             break;
     }
     
+    
+
+    console.log(playRound(humanSelection, computerSelection));
+}
+
+    for(let i=0;i<5;i++) {
+        playRound();
+        console.log("Your Score: " + humanScore);
+        console.log("AI Score: " + computerScore);
+    }
+
+
+
 }
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-console.log(playRound(humanSelection, computerSelection));
-console.log("Your Score: " + humanScore);
-console.log("AI Score: " + computerScore);
+console.log(playGame());
