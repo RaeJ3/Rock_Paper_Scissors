@@ -30,12 +30,12 @@ function playGame() {
     
 
     function playRound(humanChoice, computerChoice) {
+    rounds++;
     
     
     
     
-    
-        console.log("AI choice: " + computerChoice);
+    console.log("AI choice: " + computerChoice);
 
 
 
@@ -75,15 +75,31 @@ function playGame() {
 
 }
 
-    for(let i=0;i<5;i++) {
+    for(let i=1;i<5;i++) {
         playRound(getHumanChoice(), getComputerChoice());
-        console.log("Your Score: " + humanScore);
-        console.log("AI Score: " + computerScore);
+            // console.log(computerScore > humanScore ? "You Lose! " + humanScore + " : " + computerScore : "You Win! " + humanScore + " : " + computerScore); 
+            console.log("Your Score: " + humanScore);
+            console.log("AI Score: " + computerScore);
+            console.log(rounds);
+            switch (rounds) {
+                case rounds == 5:
+                    if(humanScore == computerScore) {
+                        console.log("You Draw! Final Score: " + humanScore + " : " + computerScore);
+                    } else if (humanScore > computerScore) {
+                        console.log("You Win! Final Score: " + humanScore + " : " + computerScore);
+                    } else if (humanScore < computerScore) {
+                        console.log("You Lose! Final Score: " + humanScore + " : " + computerScore)
+                    }
+                    break;
+            }
+            
+        }
+        // else if (computerScore = humanScore) {
+        //     console.log("You Draw! Final Score: " + humanScore + " : " + computerScore);
+        // }
     }
 
 
-
-}
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
