@@ -1,10 +1,10 @@
 let rounds = 0;
 
 function getComputerChoice() {
-    let randomChoiceForAi = Math.random();
-    if (randomChoiceForAi < .33) {
+    let randomChoiceForComputer = Math.random();
+    if (randomChoiceForComputer < .33) {
         return "rock";
-    } else if (.66 > randomChoiceForAi >= .33) {
+    } else if (.66 > randomChoiceForComputer >= .33) {
         return "paper";
     } else {
         return "scissors";
@@ -26,12 +26,12 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     console.log("Your Score: " + humanScore);
-    console.log("AI Score: " + computerScore);
+    console.log("Computer Score: " + computerScore);
     
     function playRound(humanChoice, computerChoice) {
     rounds++;
     
-    console.log("AI choice: " + computerChoice);
+    console.log("Computer choice: " + computerChoice);
 
     switch(humanChoice) {
         case computerChoice: 
@@ -73,7 +73,7 @@ function playGame() {
         console.log(rounds);
         playRound(getHumanChoice(), getComputerChoice());
             console.log("Your Score: " + humanScore);
-            console.log("AI Score: " + computerScore);
+            console.log("Computer Score: " + computerScore);
             switch (rounds) {
                 case 5:
                     console.log(rounds);
