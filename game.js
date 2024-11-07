@@ -1,4 +1,4 @@
-let rounds = 0;
+let rounds = 1;
 
 function getComputerChoice() {
     let a = Math.random();
@@ -22,22 +22,16 @@ function getHumanChoice(){
 }
 
 
-
-
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    console.log("Your Score: " + humanScore);
+    console.log("AI Score: " + computerScore);
     
-
     function playRound(humanChoice, computerChoice) {
     rounds++;
     
-    
-    
-    
     console.log("AI choice: " + computerChoice);
-
-
 
     switch(humanChoice) {
         case computerChoice: 
@@ -74,15 +68,17 @@ function playGame() {
     
 
 }
+    //Need to fix: The first round is not being console logged
 
     for(let i=1;i<5;i++) {
+        console.log(rounds);
         playRound(getHumanChoice(), getComputerChoice());
-            // console.log(computerScore > humanScore ? "You Lose! " + humanScore + " : " + computerScore : "You Win! " + humanScore + " : " + computerScore); 
             console.log("Your Score: " + humanScore);
             console.log("AI Score: " + computerScore);
-            console.log(rounds);
             switch (rounds) {
-                case rounds == 5:
+                case 5:
+                    console.log(rounds);
+
                     if(humanScore == computerScore) {
                         console.log("You Draw! Final Score: " + humanScore + " : " + computerScore);
                     } else if (humanScore > computerScore) {
@@ -91,12 +87,10 @@ function playGame() {
                         console.log("You Lose! Final Score: " + humanScore + " : " + computerScore)
                     }
                     break;
+                    default:
             }
             
         }
-        // else if (computerScore = humanScore) {
-        //     console.log("You Draw! Final Score: " + humanScore + " : " + computerScore);
-        // }
     }
 
 
