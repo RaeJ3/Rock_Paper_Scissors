@@ -68,7 +68,6 @@ function playGame() {
     
 
 }
-    //Need to fix: The first round is not being console logged
 
     for(let i=1;i<5;i++) {
         console.log(rounds);
@@ -92,10 +91,5 @@ function playGame() {
             
         }
     }
-
-
-
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
 console.log(playGame());
