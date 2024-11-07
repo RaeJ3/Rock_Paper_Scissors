@@ -1,10 +1,10 @@
-let rounds = 1;
+let rounds = 0;
 
 function getComputerChoice() {
-    let a = Math.random();
-    if (a < .33) {
+    let randomChoiceForAi = Math.random();
+    if (randomChoiceForAi < .33) {
         return "rock";
-    } else if (.66 > a >= .33) {
+    } else if (.66 > randomChoiceForAi >= .33) {
         return "paper";
     } else {
         return "scissors";
@@ -69,7 +69,7 @@ function playGame() {
 
 }
 
-    for(let i=1;i<5;i++) {
+    for(let i=0;i<5;i++) {
         console.log(rounds);
         playRound(getHumanChoice(), getComputerChoice());
             console.log("Your Score: " + humanScore);
