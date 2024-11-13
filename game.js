@@ -41,16 +41,8 @@ function getComputerChoice() {
 
 function playGame() {
 
-    
-
     function playRound(playerChoice, computerChoice) {
 
-    if (playerPoints == 5) {
-        alert(`You Win! Final Score: ${playerPoints} : ${computerPoints}`);
-    } else if (computerPoints == 5) {
-        alert(`You Lose! Final Score: ${playerPoints}  : ${computerPoints}`);
-    };
-    
     if(playerPoints !== 5 && computerPoints !== 5) {
         switch(playerChoice) {
             case computerChoice: 
@@ -85,6 +77,13 @@ function playGame() {
                 break;
 
         }
+
+        if (playerPoints == 5) {
+            alert(`You Win! Final Score: ${playerPoints} : ${computerPoints}`);
+        } else if (computerPoints == 5) {
+            alert(`You Lose! Final Score: ${playerPoints}  : ${computerPoints}`);
+        };
+
     }
 
 
